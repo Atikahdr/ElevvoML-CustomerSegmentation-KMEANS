@@ -20,6 +20,12 @@ if "cluster" not in st.session_state:
 if "history" not in st.session_state:
     st.session_state.history = []
 
+# 🔹 Configuration Page
+st.set_page_config(
+    page_title="Customer Segmentation",
+    page_icon="🛍️",
+    layout="wide",
+)
 # Page Navigation
 st.sidebar.title("Customer Segmentation")
 
@@ -250,3 +256,4 @@ elif st.session_state.page == "history":
 st.markdown("---")
 
 st.caption("💡 K-Means Clustering - Customer Segmentation | Machine Learning Prediction Project")
+
