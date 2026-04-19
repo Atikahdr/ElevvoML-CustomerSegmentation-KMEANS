@@ -70,7 +70,7 @@ def predict_segmnet(model, scaler, income, spending_score):
 
 # Home Page
 if st.session_state.page == "home":
-    st.title("🛍️ Customer Segmentation App")
+    st.title("🛍️ Mall Customer Segmentation App")
     header_img = "cs.png"
     st.image(header_img, use_container_width=True)
 
