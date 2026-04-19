@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 model = joblib.load('kmeans_model.pkl')
 scaler = joblib.load('scaler.pkl')
 
-st.set_page_config(page_title="Customer Segmentation App", layout="wide")
+st.set_page_config(page_title="Mall Customer Segmentation App", layout="wide")
 
 # Session State for Navigation
 if "page" not in st.session_state:
@@ -22,12 +22,12 @@ if "history" not in st.session_state:
 
 # 🔹 Configuration Page
 st.set_page_config(
-    page_title="Customer Segmentation",
+    page_title="Mall Customer Segmentation",
     page_icon="🛍️",
     layout="wide",
 )
 # Page Navigation
-st.sidebar.title("Customer Segmentation")
+st.sidebar.title("Mall Customer")
 
 page_map = {
     "🏠 Home": "home",
@@ -75,7 +75,7 @@ if st.session_state.page == "home":
     st.image(header_img, use_container_width=True)
 
     st.markdown("""
-    ## 📊 Welcome to the Customer Segmentation App
+    ## 📊 Welcome to the Mall Customer Segmentation App
                 
     This application uses **Machine Learning (K-Means Clustering)** 
     to segment customers based on purchasing behavior.
@@ -101,7 +101,7 @@ if st.session_state.page == "home":
     - Silhouette Score (0.555)
 
     ---
-    ## 📌 Identified Customer Segments
+    ## 📌 Identified Mall Customer Segments
 
     The model successfully identifies 5 distinct customer groups:
 
@@ -125,14 +125,14 @@ if st.session_state.page == "home":
 
     st.info("Use the sidebar navigation to explore the dashboard.")
         
-    if st.button("🚀 Start Customer Segmentation"):
+    if st.button("🚀 Start Mall Customer Segmentation"):
         st.session_state.page = "input"
         st.rerun()
 
 # Input Page
 elif st.session_state.page == "input":
 
-    st.title("🎯 Customer Segment Prediction")
+    st.title("🎯 Mall Customer Prediction")
     st.markdown("Enter Customer Information")
 
     col1, col2 = st.columns(2)
